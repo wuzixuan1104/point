@@ -1,0 +1,187 @@
+/**
+ * @author      ZEUS Design <service@zeusdesign.com.tw>
+ * @copyright   Copyright (c) 2015 - 2018, OAF2E
+ * @license     http://opensource.org/licenses/MIT  MIT License
+ * @link        https://www.zeusdesign.com.tw
+ */
+
+@import "_oa";
+
+* {
+  &, &:after, &:before {
+    vertical-align: top;
+    @include box-sizing(border-box);
+    @include selection(rgba(150, 200, 255, 1), rgba(255, 255, 255, 1));
+    @include font-smoothing(antialiased);
+  }
+}
+
+html {
+  min-height: 100%;
+
+  body {
+    position: relative;
+
+    display: inline-block;
+    width: 100%;
+    min-height: 100%;
+    margin: 0;
+    padding: 0;
+
+    color: rgba(90, 90, 90, 1.00);
+    text-align: center;
+    font-size: medium;
+    font-family: Roboto, RobotoDraft, Helvetica, Arial, sans-serif, "微軟正黑體", "Microsoft JhengHei";
+
+    @include font-smoothing(antialiased);
+  }
+}
+
+
+// d
+img {
+  width: 100%;
+  max-width: 1365px;
+}
+
+
+
+header {
+  display: inline-block;
+  width: 100%;
+  border-bottom: 1px solid rgba(150, 150, 150, .2);
+
+  .lang_boxs {
+    display: inline-block;
+    width: 100%;
+    background-color: rgba(69, 20, 130, 1.00);
+
+    .lang_box {
+      display: inline-block;
+      width: 100%;
+      max-width: 1110px;
+      padding: 10px 0;
+      @include clearfix();
+
+      @include range-width(0, 1130px) {
+        padding: 10px;
+      }
+      
+      a {
+        display: inline-block;
+        float: right;
+        color: white;
+        font-size: 14px;
+
+        &:after {
+          display: inline-block;
+          content: '\e90a';
+          font-family: "icomoon";
+          margin-left: 10px;
+        } 
+      }
+    }
+  }
+
+  .menu_boxs {
+    display: inline-block;
+    width: 100%;
+    background-color: white;
+    padding: 20px 0;
+
+    @include range-width(0, 450px) {
+      padding: 10px 0;
+    }
+
+    .menu_box {
+      display: inline-block;
+      width: 100%;
+      max-width: 1110px;
+
+      @include range-width(0, 1130px) {
+        padding: 0 10px;
+      }
+
+      a {
+        display: inline-block;
+        cursor: pointer;
+        border: 0;
+        outline: 0;
+        float: left;
+
+        @include range-width(0, 730px) {
+          float: none;
+        }
+
+        img {
+          width: 100%;
+          max-width: 190px;
+        }
+      }
+
+      .nav_boxs {
+        display: inline-block;
+        width: calc(100% - 120px);
+        float: right;
+
+        @include range-width(0, 730px) {
+          display: none;
+        }
+
+        > a, div {
+          display: inline-block;
+          cursor: pointer;
+          float: right;
+          padding: 10px 0;
+          margin-left: 60px;
+          font-size: 16px;
+          color: rgba(45, 45, 45, 1.00);
+          @include transition(all .3s);
+
+          @include range-width(855px, 975px) {
+            margin-left: 40px;
+          }
+
+          @include range-width(730px, 855px) {
+            margin-left: 30px;
+          }
+          
+          &:hover, &:active {
+            color: rgba(60, 21, 117, 1.00);
+          }
+
+          &.login {
+            display: inline-block;
+            color: rgba(69, 20, 130, 1.00);
+            float: right;
+
+            &:before {
+              display: inline-block;
+              content: '\e900';
+              font-family: "icomoon";
+              margin-right: 10px;
+            }
+          }
+        }
+      }
+    } 
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
