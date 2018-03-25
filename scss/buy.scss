@@ -1,0 +1,413 @@
+/**
+ * @author      ZEUS Design <service@zeusdesign.com.tw>
+ * @copyright   Copyright (c) 2015 - 2018, OAF2E
+ * @license     http://opensource.org/licenses/MIT  MIT License
+ * @link        https://www.zeusdesign.com.tw
+ */
+
+@import "_oa";
+
+
+#buy-title {
+  display: inline-block;
+  width: 100%;
+  color: rgba(0, 0, 0, 1.00);
+
+  height: 62px;
+  line-height: 62px;
+  
+  > * {
+    display: inline-block;
+    width: 100%;
+    max-width: 1110px;
+    margin: 0;
+    text-align: left;
+    font-size: 18px;
+    
+    @include range-width(0, 1150px) {
+      padding: 0 8px;
+    };
+  }
+}
+
+#buy-main {
+  display: inline-block;
+  width: 100%;
+  padding-top: 16px;
+
+  background-color: rgba(242, 242, 242, 1.00);
+
+  > div {
+    display: inline-block;
+    width: 100%;
+    max-width: 1110px;
+    
+    @include range-width(0, 1150px) {
+      padding: 0 8px;
+    };
+
+    > b {
+      position: relative;
+      display: inline-block;
+      width: 100%;
+      margin-top: 8px;
+      &:not(:first-child) {
+        margin-top: 48px;
+      }
+      
+      text-align: left;
+      padding-left: 30px;
+      color: rgba(0, 0, 0, 1.00);
+
+      &:before {
+        position: absolute;
+        left: 0;
+        top: 0;
+
+        content: attr(data-i);
+        display: inline-block;
+        width: 24px;
+        height: 24px;
+        line-height: 24px;
+        text-align: center;
+        background-color: rgba(66, 14, 131, 1.00);
+        color: white;
+
+        @include border-radius(50%);
+      }
+      &:after {
+        content: attr(data-tip);
+        display: inline-block;
+        width: 100%;
+        color: rgba(107, 107, 107, 1.00);
+        
+        font-weight: normal;
+        font-size: 14px;
+      }
+    }
+
+    .classes {
+      display: inline-block;
+      width: 100%;
+      margin-top: 16px;
+      @include clearfix();
+      
+      > * {
+        float: left;
+        display: inline-block;
+        width: calc(100% / 4 - 16px * 3 / 4);
+        text-decoration: none;
+        background-color: rgba(255, 255, 255, 1.00);
+        @include border-radius(3px);
+        padding: 20px 22px;
+        text-align: left;
+        cursor: pointer;
+
+        + * {
+          margin-left: 16px;
+        }
+        @include transition(color .3s, background-color .3s);
+        
+        &.active, &:hover {
+          background-color: rgba(66, 14, 131, 1.00);
+          &, > * {
+            color: white;
+          }
+        }
+        b {
+          display: inline-block;
+          width: 100%;
+          height: 23px;
+          line-height: 23px;
+          font-size: 18px;
+          color: rgba(0, 0, 0, 1.00);
+          @include overflow-docx3();
+        }
+        div {
+          display: inline-block;
+          width: 100%;
+          font-size: 14px;
+          overflow: hidden;
+          line-height: 21px;
+          height: 21px * 3;
+          margin-top: 6px;
+          color: rgba(71, 71, 71, 1.00);
+        }
+        span {
+          display: inline-block;
+          width: 100%;
+          font-size: 22px;
+          margin-top: 8px;
+          color: rgba(82, 82, 82, 1.00);
+
+          &:before {
+            content: '$';
+            font-size: 20px;
+          }
+          &:after {
+            content: '元';
+            display: inline-block;
+            margin-top: 4px;
+            font-size: 14px;
+          }
+        }
+      }
+      @include range-width(0, 1000px) {
+        -webkit-overflow-scrolling: touch;
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        display: flex;
+        > * {
+          flex: 0 0 auto;
+          width: 230px;
+        }
+      };
+    }
+    .date {
+      display: block;
+      width: 300px;
+      background-color: white;
+      text-align: left;
+      margin-top: 16px;
+      margin-left: 30px;
+      height: 32px;
+      line-height: 32px;
+      padding-left: 4px;
+      @include border-radius(3px);
+      overflow: hidden;
+      border: 1px solid rgba(200, 200, 200, 1.00);;
+      @include overflow-docx3();
+
+      input {
+        float: left;
+        @include input;
+        height: 100%;
+        border: 0;
+        width: calc(100% - 32px);
+        &:focus {
+          outline: 0;
+          border: 0;
+          @include box-shadow(none);
+        }
+      }
+      &:before {
+        float: left;
+        display: inline-block;
+        width: 32px;
+        height: 32px;
+        line-height: 32px;
+        font-size: 20px;
+        color: rgba(149, 149, 149, 1.00);
+      }
+    }
+    .money {
+      display: inline-block;
+      width: 100%;
+      text-align: left;
+
+      >* {
+        text-align: right;
+        display: inline-block;
+        width: 100%;
+        height: 40px;
+        line-height: 40px;
+        padding-left: 30px;
+        padding-right: 30px;
+        b {
+          color: rgba(66, 14, 131, 1.00);
+        }
+        &:before {
+          margin-right: 5px;
+          display: inline-block;
+          margin-top: 1px;
+        }
+      }
+
+      >div {
+        border-bottom: 1px solid rgba(208, 208, 208, 1.00);
+        @include clearfix();
+
+        > * {
+          float: left;
+          display: inline-block;
+          width: 50%;
+          font-size: 18px;
+          text-align: left;
+          color: rgba(80, 80, 80, 1.00);
+
+          + * {
+            text-align: right;
+            color: rgba(0, 0, 0, 1.00);
+          }
+        }
+      }
+    }
+    .form {
+      display: inline-block;
+      width: 100%;
+      background-color: rgba(255, 255, 255, 1.00);
+      padding: 32px;
+      border: 1px solid rgba(0, 0, 0, .1);
+      @include border-radius(3px);
+      @include clearfix();
+
+      > div {
+        float: left;
+        display: inline-block;
+        
+        text-align: left;
+        @include clearfix();
+        
+        > * {
+          float: left;
+          display: inline-block;
+          width: 120px;
+          height: 32px;
+          line-height: 32px;
+          color: rgba(116, 116, 116, 1.00);
+
+          + * {
+            width: calc(100% - 120px);
+          }
+        }
+        @include range-width(0, 750px) {
+          width: 100%;
+          + * {
+            margin-top: 8px;
+          }
+        };
+        @include range-width(750px) {
+          width: 50%;
+
+          &:nth-child(2n + 1) {
+            padding-right: 12px;
+          }
+          &:nth-child(2n + 2) {
+            padding-left: 12px;
+          }
+          &:nth-child(n + 3) {
+            margin-top: 8px;
+          }
+        };
+        input, select {
+          @include input(rgba(52, 61, 162, 1.00));
+        }
+
+      }
+    }
+    .pay {
+      display: inline-block;
+      width: 100%;
+      background-color: rgba(255, 255, 255, 1.00);
+      padding: 32px;
+      border: 1px solid rgba(0, 0, 0, .1);
+      @include border-radius(3px);
+      @include clearfix();
+
+      > * {
+        position: relative;
+        float: left;
+        display: inline-block;
+        height: 140px;
+        border: 1px solid rgba(230, 230, 230, 1.00);
+        @include border-radius(3px);
+        // overflow: hidden;
+        padding: 32px;
+        cursor: pointer;
+
+        img {
+          max-width: 100%;
+          max-height: 100%;
+        }
+        &.active {
+          border: 2px solid rgba(108, 48, 214, 1.00);
+          &:before {
+            position: absolute;
+            top: 0 - 32px / 2;
+            right: 0 - 32px / 2;
+            display: inline-block;
+            width: 32px;
+            height: 32px;
+            line-height: 32px;
+            @include border-radius(50%);
+            content: '\e90a';
+            font-family: "icomoon"; speak: none; font-style: normal; font-weight: normal; font-variant: normal;
+            @include font-smoothing(antialiased);
+            background-color: rgba(125, 31, 217, 1.00);
+            font-weight: bold;
+            color: white;
+          }
+        }
+        @include range-width(0, 550px) {
+          padding: 20px 16px;
+          width: 100%;
+          
+          + * {
+            margin-top: 20px;
+          }
+        };
+        @include range-width(550px, 900px) {
+
+          width: calc(100% / 2 - 20px / 2);
+          
+          &:nth-child(2n + 2) {
+            margin-left: 20px;
+          }
+          &:nth-child(n + 3) {
+            margin-top: 20px;
+          }
+        };
+        @include range-width(900px) {
+          width: calc(100% / 4 - 20px * 3 / 4);
+
+          + * {
+            margin-left: 20px;
+          }
+        };
+      }
+    }
+    > span {
+      color: rgba(102, 102, 102, 1.00);
+      display: inline-block;
+      width: 100%;
+      height: 48px;
+      line-height: 48px;
+      margin-top: 8px;
+      font-size: 14px;
+      border-bottom: 1px solid rgba(204, 204, 204, 1.00);
+    }
+    .final {
+      display: inline-block;
+      width: 100%;
+      margin-top: 16px;
+      margin-bottom: 32px;
+      span {
+        display: inline-block;
+        width: 100%;
+        height: 32px;
+        line-height: 32px;
+        font-size: 20px;
+        color: rgba(94, 94, 94, 1.00);
+
+        b {
+          color: rgba(45, 45, 45, 1.00);
+        }
+      }
+      button {
+        display: inline-block;
+        width: 200px;
+        height: 36px;
+        line-height: 36px;
+        background-color: rgba(125, 31, 217, 1.00);
+        color: white;
+        margin-top: 8px;
+        @include border-radius(3px);
+
+        &:focus {
+          outline: 0;
+        }
+      }
+    }
+  }
+
+}
