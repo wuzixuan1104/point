@@ -24,4 +24,16 @@ $(function () {
     });
   });
 
+  $('.login_boxs .icon-x').click (function () {
+    $('.login_boxs').toggleClass ('show');
+  });
+  
+  $('.login_boxs .show-reg').click (function () {
+    $('.login_boxs').toggleClass ('show-reg');
+  });
+
+  $('#login-btn').click (function () {
+    $('.login_boxs').toggleClass ('show');
+  });
+
 });

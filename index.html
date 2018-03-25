@@ -26,7 +26,7 @@
         <div class='menu_box'>
           <a class='pc_login' href="index.html"><img src="img/logo.png"></a>
           <div class='nav_boxs'>
-            <div class='login'>登入 / 註冊</div>
+            <div class='login' id='login-btn'>登入 / 註冊</div>
             <div>選單項目三</div>
             <div>選單項目二</div>
             <div>選單項目一</div>
@@ -64,25 +64,6 @@
 
 
     <div class='login_boxs'>
-      <!-- 登入 -->
-      <!-- <div class='login_box'>
-        <div class='btn_close icon-x'></div>
-        <div class='login_title'><span>登入</span></div>
-
-        <div class='ls_r'>
-          <div class='login_cent'>
-            <div class='input_box i_01'><input type='text' placeholder='電子郵件'></div>
-          </div>
-
-          <div class='login_cent'>
-            <div class='input_box i_02'><input type='text' placeholder='密碼'></div>
-          </div>
-
-          <div class='login_cent'><button>登入</button></div>
-          <div class='login_cent'><span>需要一個帳戶? </span><a href="sign.html">立即註冊!</a></div>
-        </div>
-      </div> -->
-
 
       <!-- 註冊 -->
       <div class='login_box s_l'>
@@ -92,7 +73,7 @@
         <div class='ls_l'>
           <span>創建帳戶</span>
           <p>開始創建您的帳戶</p>
-          <span class='sm_type smno'>已經是用戶了？ </span><a class='sm_link sma' href="sign.html"> 登入</a>
+          <span class='sm_type smno'>已經是用戶了？ </span><a class='sm_link sma show-reg'> 登入</a>
         </div>
 
         <div class='ls_r'>
@@ -114,9 +95,30 @@
 
           <div class='login_cent'><button>註冊</button></div>
 
-          <div class='login_cent noshow'><span>已經是用戶了？ </span><a href="sign.html">登入</a></div>
+          <div class='login_cent noshow'><span>已經是用戶了？ </span><a class='show-reg'>登入</a></div>
         </div>
       </div>
+
+      <!-- 登入 -->
+      <div class='login_box'>
+        <div class='btn_close icon-x'></div>
+        <div class='login_title'><span>登入</span></div>
+
+        <div class='ls_r'>
+          <div class='login_cent'>
+            <div class='input_box i_01'><input type='text' placeholder='電子郵件'></div>
+          </div>
+
+          <div class='login_cent'>
+            <div class='input_box i_02'><input type='text' placeholder='密碼'></div>
+          </div>
+
+          <div class='login_cent'><button>登入</button></div>
+          <div class='login_cent'><span>需要一個帳戶? </span><a class='show-reg'>立即註冊!</a></div>
+        </div>
+      </div>
+
+
     </div>
 
 
