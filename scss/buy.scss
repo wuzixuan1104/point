@@ -193,10 +193,11 @@
       &:before {
         float: left;
         display: inline-block;
-        width: 32px;
+        width: 20px;
         height: 32px;
-        line-height: 32px;
+        line-height: 29px;
         font-size: 20px;
+        margin-left: 3px;
         color: rgba(149, 149, 149, 1.00);
       }
     }
@@ -321,6 +322,15 @@
         }
         &.active {
           border: 2px solid rgba(108, 48, 214, 1.00);
+          padding: 13px 32px;
+
+          input {
+            display: inline-block;
+            border: 1px solid rgba(226, 226, 226, 1.00);
+            width: 100%;
+            @include border-radius(3px);
+            padding: 5px;
+          }
           &:before {
             position: absolute;
             top: 0 - 32px / 2;
@@ -375,12 +385,20 @@
       margin-top: 8px;
       font-size: 14px;
       border-bottom: 1px solid rgba(204, 204, 204, 1.00);
+
+      .link_mail {
+        display: inline-block;
+        color: rgba(116, 34, 213, 1.00);
+        text-decoration: underline;
+        cursor: pointer;
+      }
     }
     .final {
       display: inline-block;
       width: 100%;
       margin-top: 16px;
       margin-bottom: 32px;
+
       span {
         display: inline-block;
         width: 100%;
@@ -393,14 +411,18 @@
           color: rgba(45, 45, 45, 1.00);
         }
       }
-      button {
+
+      a, button {
         display: inline-block;
+        cursor: pointer;
         width: 200px;
-        height: 36px;
-        line-height: 36px;
+        height: 40px;
+        line-height: 40px;
         background-color: rgba(125, 31, 217, 1.00);
         color: white;
         margin-top: 8px;
+        font-size: 16px;
+        text-decoration: none;
         @include border-radius(3px);
 
         &:focus {
@@ -411,3 +433,45 @@
   }
 
 }
+
+
+.ok_boxs {
+  display: inline-block;
+  width: 100%;
+  max-width: 1110px;
+  padding: 200px 0;
+
+  .ok_icon {
+    display: inline-block;
+    font-size: 40px;
+    color: rgba(65, 13, 126, 1.00);
+  }
+
+  span {
+    display: inline-block;
+    width: 100%;
+    font-size: 24px;
+    font-weight: 600;
+    color: black;
+    margin: 10px 0;
+  }
+
+  p {
+    display: inline-block;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    font-size: 16px;
+    color: rgba(141, 141, 141, 1.00);
+
+    a {
+      display: inline-block;
+      color: rgba(111, 8, 216, 1.00);
+      text-decoration: underline;
+      cursor: pointer;
+    }
+  }
+}
+
+
+

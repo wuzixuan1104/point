@@ -172,6 +172,11 @@ header {
               margin-right: 10px;
               font-size: 22px;
             }
+
+            &.nolo {
+              cursor: auto;
+              text-decoration: none;
+            }
           }
         }
       }
@@ -693,6 +698,15 @@ header {
   }
 }
 
+
+footer {
+  display: inline-block;
+  width: 100%;
+  background-color: rgba(17, 0, 29, 1.00);
+  padding: 10px 0;
+  color: white;
+  font-size: 14px;
+}
 
 
 
