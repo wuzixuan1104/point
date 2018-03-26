@@ -6,5 +6,8 @@
  */
  
 $(function () {
-  
+  $('.pay .pay_boxs a').click (function () {
+    $(this).addClass ('active').parent ().siblings ().find ('a').removeClass ('active');
+    $('.pay .pay_info').removeClass ('show').eq ($(this).parent ().index ()).addClass ('show');
+  });
 });

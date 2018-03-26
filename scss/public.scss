@@ -318,22 +318,37 @@ header {
   &.show {
     display: inline-block;
   }
+
   &.show-reg {
-    > .login_box.s_l {
-      display: inline-block;
-      ~ .login_box {
-        display: none;
+    .login_box {
+      display: none !important;
+      &.s_l {
+        display: inline-block !important;
       }
     }
   }
+
+  &.show-psw {
+    .login_box {
+      display: none !important;
+      &.s_p {
+        display: inline-block !important;
+      }
+    }
+  }
+
   .login_box {
-    display: inline-block;
+    display: none;
     width: 100%;
     max-width: 590px;
     background-color: white;
     padding: 25px 50px;
     @include border-radius(3px);
     margin-top: 80px;
+
+    &:first-child {
+      display: inline-block;
+    }
     // @include box-shadow(0 0 10px rgba(197, 197, 197, 1.00));
 
     @include range-width(450px, 720px) {

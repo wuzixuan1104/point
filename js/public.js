@@ -31,6 +31,9 @@ $(function () {
   $('.login_boxs .show-reg').click (function () {
     $('.login_boxs').toggleClass ('show-reg');
   });
+  $('.login_boxs .show-psw').click (function () {
+    $('.login_boxs').toggleClass ('show-psw');
+  });
 
   $('#login-btn').click (function () {
     $('.login_boxs').toggleClass ('show');

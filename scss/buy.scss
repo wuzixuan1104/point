@@ -413,11 +413,14 @@
       }
 
       .pay_info {
-        display: inline-block;
+        display: none;
         width: 100%;
         margin-top: 20px;
         border-top: 2px solid rgba(234, 234, 234, 1.00);
         padding: 20px 0 0 0;
+        &.show {
+          display: inline-block;
+        }
 
         .p_info_box {
           display: inline-block;
