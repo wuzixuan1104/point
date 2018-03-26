@@ -130,7 +130,7 @@
             <input />
           </div>
           <div>
-            <b>電子郵件．Mail</b>
+            <b>電子郵件．E-Mail</b>
             <input />
           </div>
           <div>
@@ -138,53 +138,136 @@
             <input />
           </div>
           <div>
-            <b>國家</b>
+            <b>國家．Country</b>
             <select><option>AAAA</option></select>
           </div>
           <div>
-            <b>市</b>
+            <b>市．City</b>
             <select><option>AAAA</option></select>
           </div>
           <div>
-            <b>郵遞區號</b>
+            <b>郵遞區號．Zip code</b>
             <input />
           </div>
           <div>
-            <b>帳單地址．Add</b>
+            <b>寄送地址．Delivery address </b>
             <input />
           </div>
           <div>
-            <b>你怎知道我們</b>
+            <b>你怎知道我們．You Know us from?</b>
             <select><option>AAAA</option></select>
           </div>
           <div>
-            <b>法學院</b>
+            <b>法您就讀?．Where you study?</b>
             <input />
           </div>
         </div>
         
         <b data-i='5'>付款詳情</b>
         <div class='pay'>
-          <a>
-            <img src="img/pay01.png">
-          </a>
-          <a>
-            <img src="img/pay02.png">
-          </a>
-          <a class='active'>
-            <img src="img/pay03.png">
-            <input type='text' placeholder='請輸入後五碼'>
-          </a>
-          <a>
-            <img src="img/pay04.png">
-          </a>
-        </div>
+          <div class='pay_boxs'>
+            <a class='active'><img src="img/pay01.png"></a>
+          </div>
+          <div class='pay_boxs'>
+            <a><img src="img/pay03.png"></a>
+          </div>
+          <div class='pay_boxs'>
+            <a><img src="img/pay04.png"></a>
+          </div>
+          <div class='pay_boxs'>
+            <a><img src="img/pay05.png"></a>
+          </div>
+          <div class='pay_boxs'>
+            <a><img src="img/pay02.png"></a>
+          </div>
+          
+
+          <div class='pay_info'>
+            <div class='p_info_box'>
+              <span>Zelle 系統支付</span>
+              <p>只要您擁有美國各大銀行帳號，可以直接用您使用的銀行app轉帳免手續費（課程費用另折扣5%off），
+                可支援的銀行包含有：Bank of America, Chase, Citi, Capital One, U.S. Bank, Bank 
+                of the West, Wells Fargo, etc. 其他更多加入Zelle的銀行請參見：
+                <a href="https://www.zellepay.com/get-started" target="_blank">https://www.zellepay.com/get-started</a>
+              </p>
+
+              <div class='pay_mail'>
+                <b>付款操作方式：(以Chase QuickPay 為例)</b>
+                  </br><i>01 /</i> 進入您熟悉的美國銀行app並且找到Zelle支付功能，例如：打開Chase 銀行app 中在選單中選取QuickPay with Zelle。
+                  </br>不知道自己銀行的app操作方式，請參考此網站<a href="https://www.zellepay.com/get-started" target="_blank">https://www.zellepay.com/get-started</a> 選擇自己使用的銀行按照提示操作。
+                  </br><i>02 /</i> 選擇『Send Money』→『Add recipient』→ 在Name欄位輸入Point Bar Review，email欄位輸入：payment@pointbarreview.com →『Add recipient』。
+                  </br><i>03 /</i> 回到『Send Money』，輸入顯示于本頁面上購物車上的總金額，並在備註欄寫上您的Point ID <i class='pay_note'>：可在您的 Account setting 中或是註冊信中看到</i>，並且按『Send money』。
+                  </br><i>04 /</i> 將您收到的銀行確認信轉寄到 payment@pointbarreview.com 信箱。我們將于24小時內確認付款狀態並寄送確認信件。
+              </div>
+
+              <p class='ch_ok'><input id="checkBox" type="checkbox">我瞭解如何支付款項，將於三天內以ATM轉帳支付款項。</p>
+            </div>
+
+            <div class='p_info_box'>
+              <button class='pb_ok'>確認結帳</button>
+              <b>USD 395</b>
+            </div>
+          </div>
+
+          <div class='pay_info'>
+            <div class='p_info_box'>
+              <span>支付寶</span>
+              <p>因為有匯率浮動問題，需要使用支付寶或微信支付的學員，請來信索取支付寶/微信支付收款QRcode。匯率以索取QRcode當天匯率中價來計算。</p>
+              <div class='pay_mail'>請留下信箱，索取QRcode：
+                <input class='pay_mail_in' type="text" placeholder='請輸入正確mail格式' >
+              </div>
+              
+              <p class='ch_ok'><input id="checkBox" type="checkbox">我瞭解如何支付款項，將於三天內以ATM轉帳支付款項。</p>
+            </div>
+
+            <div class='p_info_box'>
+              <button>確認結帳</button>
+              <b>NTD 395</b>
+            </div>
+          </div>
+
+          <div class='pay_info'>
+            <div class='p_info_box'>
+              <span>微信支付</span>
+              <p>因為有匯率浮動問題，需要使用支付寶或微信支付的學員，請來信索取支付寶/微信支付收款QRcode。匯率以索取QRcode當天匯率中價來計算。</p>
+              <div class='pay_mail'>請留下信箱，索取QRcode：
+                <input class='pay_mail_in' type="text" placeholder='請輸入正確mail格式' >
+              </div>
+              
+              <p class='ch_ok'><input id="checkBox" type="checkbox">我瞭解如何支付款項，將於三天內以ATM轉帳支付款項。</p>
+            </div>
+
+            <div class='p_info_box'>
+              <button>確認結帳</button>
+              <b>NTD 395</b>
+            </div>
+          </div>
+
+          <div class='pay_info'>
+            <div class='p_info_box'>
+              <span>ATM/Web ATM 轉帳 （僅限具有台灣的銀行帳號者使用）</span>
+              <p>
+                得點國際顧問有限公司
+                </br>銀行帳號：中國信託 (822)772540203954
+                </br>匯款後請來信至 <a href="mailto:payment@pointbarreview.com">payment@pointbarreview.com</a> 告知匯款帳號後五碼，我們確認後將於24小時內確認付款狀態並寄送確認信件。
+              </p>
+
+              <p class='ch_ok'><input id="checkBox" type="checkbox">我瞭解如何支付款項，將於三天內以ATM轉帳支付款項。</p>
+            </div>
+
+            <div class='p_info_box'>
+              <button>確認結帳</button>
+              <b>NTD 395</b>
+            </div>
+          </div>
         
-        <span>若需其他支付方式，如支付寶、紙本支票....請來信<a class='link_mail' href='mailto:111'>聯絡我們</a></span>
-        <div class='final'>
+        </div>
+
+        <!-- <span>若需其他支付方式，如支付寶、紙本支票....請來信<a class='link_mail' href='mailto:payment@pointbarreview.com '>聯絡我們</a></span> -->
+        <!-- <div class='final'>
           <span>總費用 <b>390</b> 美元</span>
           <a href='buy01.html'>結帳</a>
-        </div>
+        </div> -->
       </div>
     </div>
 

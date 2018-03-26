@@ -314,6 +314,7 @@ header {
   z-index: 88;
   // height: calc(100% - 129px);
   background-color: rgba(23, 24, 20, .8);
+
   &.show {
     display: inline-block;
   }
@@ -471,6 +472,7 @@ header {
         max-width: 350px;
         margin: 15px 0;
         text-align: left;
+        @include clearfix();
 
         @include range-width(0, 600px) {
           max-width: none;
@@ -554,6 +556,35 @@ header {
               font-weight: normal;
               color: rgba(62, 62, 62, .3);
             }
+          }
+        }
+
+        .ll {
+          display: inline-block;
+          float: left;
+          font-size: 14px;
+
+          input {
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+
+            &:focus {
+              outline: 0;
+            }
+          }
+        }
+
+        .lr {
+          display: inline-block;
+          float: right;
+          text-align: right;
+
+          a {
+            display: inline-block;
+            cursor: pointer;
+            color: rgba(114, 5, 216, 1.00);
+            text-decoration: underline;
           }
         }
 

@@ -262,21 +262,32 @@
         > * {
           float: left;
           display: inline-block;
-          width: 120px;
+          width: 250px;
           height: 32px;
           line-height: 32px;
           color: rgba(116, 116, 116, 1.00);
+          font-size: 14px;
 
           + * {
-            width: calc(100% - 120px);
+            width: calc(100% - 250px);
+          }
+
+          @include range-width(0, 750px) {
+            width: 100%;
+            font-size: 16px;
+            + * {
+              width: 100%;
+            }
           }
         }
+
         @include range-width(0, 750px) {
           width: 100%;
           + * {
             margin-top: 8px;
           }
         };
+
         @include range-width(750px) {
           width: 50%;
 
@@ -301,81 +312,359 @@
       width: 100%;
       background-color: rgba(255, 255, 255, 1.00);
       padding: 32px;
+      margin-bottom: 30px;
       border: 1px solid rgba(0, 0, 0, .1);
       @include border-radius(3px);
       @include clearfix();
 
-      > * {
-        position: relative;
-        float: left;
+      .pay_boxs {
         display: inline-block;
-        height: 140px;
-        border: 1px solid rgba(230, 230, 230, 1.00);
-        @include border-radius(3px);
-        // overflow: hidden;
-        padding: 32px;
-        cursor: pointer;
+        float: left;
 
-        img {
-          max-width: 100%;
-          max-height: 100%;
-        }
-        &.active {
-          border: 2px solid rgba(108, 48, 214, 1.00);
-          padding: 13px 32px;
+        // d
+        height: 100px;
 
-          input {
-            display: inline-block;
-            border: 1px solid rgba(226, 226, 226, 1.00);
-            width: 100%;
-            @include border-radius(3px);
-            padding: 5px;
-          }
-          &:before {
-            position: absolute;
-            top: 0 - 32px / 2;
-            right: 0 - 32px / 2;
-            display: inline-block;
-            width: 32px;
-            height: 32px;
-            line-height: 32px;
-            @include border-radius(50%);
-            content: '\e90a';
-            font-family: "icomoon"; speak: none; font-style: normal; font-weight: normal; font-variant: normal;
-            @include font-smoothing(antialiased);
-            background-color: rgba(125, 31, 217, 1.00);
-            font-weight: bold;
-            color: white;
-          }
-        }
-        @include range-width(0, 550px) {
-          padding: 20px 16px;
-          width: 100%;
-          
-          + * {
-            margin-top: 20px;
-          }
-        };
-        @include range-width(550px, 900px) {
-
-          width: calc(100% / 2 - 20px / 2);
-          
-          &:nth-child(2n + 2) {
-            margin-left: 20px;
-          }
-          &:nth-child(n + 3) {
-            margin-top: 20px;
-          }
-        };
         @include range-width(900px) {
-          width: calc(100% / 4 - 20px * 3 / 4);
+          width: calc(100% / 5 - 20px * 4 / 5);
+          margin-right: 20px;
 
-          + * {
-            margin-left: 20px;
+          &:nth-child(5n+5) {
+            margin-right: 0;
           }
-        };
+
+          &:nth-child(n+6) {
+            margin-top: 20px;
+          }
+        }
+
+        @include range-width(550px, 900px) {
+          width: calc(100% / 3 - 20px * 2 / 3);
+
+          &:nth-child(3n+2) {
+            margin: 0 20px;
+          }
+
+          &:nth-child(n+4) {
+            margin-top: 20px;
+          }
+        }
+
+        @include range-width(0, 550px) {
+          width: calc(100% / 2 - 20px * 1 / 2);
+
+          &:nth-child(2n+1) {
+            margin-right: 10px;
+          }
+
+          &:nth-child(2n+2) {
+            margin-left: 10px;
+          }
+
+          &:nth-child(n+3) {
+            margin-top: 10px;
+          }
+        }
+
+        a {
+          display: inline-block;
+          width: 100%;
+          border: 1px solid rgba(234, 234, 234, 1.00);
+          @include border-radius(2px);
+          position: relative;
+          cursor: pointer;
+
+          img {
+            width: 100%;
+          }
+
+          &:hover {
+            border: 2px solid rgba(108, 48, 214, 1.00);
+          }
+
+          &.active {
+            border: 2px solid rgba(108, 48, 214, 1.00);
+
+            input {
+              display: inline-block;
+              border: 1px solid rgba(226, 226, 226, 1.00);
+              width: 100%;
+              @include border-radius(3px);
+              padding: 5px;
+            }
+            &:before {
+              position: absolute;
+              top: -15px;
+              right: -15px;
+              display: inline-block;
+              width: 32px;
+              height: 32px;
+              line-height: 32px;
+              @include border-radius(50%);
+              content: '\e918';
+              font-family: "icomoon"; speak: none; font-style: normal; font-weight: normal; font-variant: normal;
+              @include font-smoothing(antialiased);
+              background-color: rgba(125, 31, 217, 1.00);
+              font-weight: bold;
+              color: white;
+              z-index: 100;
+            }
+          }
+        }
       }
+
+      .pay_info {
+        display: inline-block;
+        width: 100%;
+        margin-top: 20px;
+        border-top: 2px solid rgba(234, 234, 234, 1.00);
+        padding: 20px 0 0 0;
+
+        .p_info_box {
+          display: inline-block;
+          width: 100%;
+          text-align: left;
+
+          span {
+            display: inline-block;
+            width: 100%;
+            font-size: 20px;
+            color: rgba(57, 17, 120, 1.00);
+            font-weight: 600;
+            margin-bottom: 10px;
+          }
+
+          .pay_mail {
+            display: inline-block;
+            width: 100%;
+            border-top: 1px solid rgba(196, 197, 196, .5); 
+            margin-top: 10px;
+            padding: 15px 0 5px 0;
+            font-size: 16px;
+            color: black;
+            line-height: 32px;
+
+            .pay_mail_in {
+              display: inline-block;
+              width: 300px;
+              padding: 5px 10px;
+              font-size: 16px;
+              color: black;
+
+              &:focus {
+                outline: 0;
+              }
+
+              @include input-placeholder {
+                font-size: 16px;
+                font-weight: normal;
+                color: rgba(62, 62, 62, .3);
+              }
+            }
+
+            b {
+              display: inline-block;
+              width: 100%;
+              font-size: 16px;
+              color: rgba(0, 148, 234, 1.00);
+              margin: 0;
+
+              &:before, &:after {
+                display: none;
+              }
+            }
+
+            i {
+              display: inline-block;
+              font-style: normal;
+              font-size: 14px;
+              color: rgba(0, 148, 234, 1.00);
+
+              &.pay_note {
+                font-style: italic;
+                color: rgba(57, 17, 120, .8);
+              }
+            }
+          }
+
+          p {
+            display: inline-block;
+            width: 100%;
+            margin: 0;
+            padding: 0;
+            font-size: 16px;
+            color: black;
+
+            &.ch_ok {
+              padding: 10px 0;
+              border-top: 1px solid rgba(196, 197, 196, .5);
+              border-bottom: 1px solid rgba(196, 197, 196, .5);
+              margin: 10px 0;
+
+              input {
+                display: inline-block;
+                width: 20px;
+                height: 20px;
+              }
+            }
+
+            a {
+              display: inline-block;
+              cursor: pointer;
+              color: rgba(113, 30, 212, 1.00);
+              font-size: 16;
+              text-decoration: none;
+
+              &:hover, &:active {
+                text-decoration: underline;
+              }
+            }
+          }
+
+          b {
+            display: inline-block;
+            font-size: 24px;
+            float: right;
+            margin: 10px;
+            line-height: 40px;
+            color: black;
+
+            &:before {
+              display: inline-block;
+              content: '總金額';
+              font-size: 16px;
+              color: black;
+              margin-right: 10px;
+            }
+            &:after {
+              display: inline-block;
+              content: '元';
+              font-size: 16px;
+              color: black;
+              margin-left: 10px;
+            }
+          }
+
+          button {
+            display: inline-block;
+            width: 200px;
+            height: 40px;
+            line-height: 36px;
+            color: white;
+            margin-top: 8px;
+            font-size: 18px;
+            text-decoration: none;
+            @include border-radius(3px);
+            float: right;
+            background-color: rgba(69, 70, 67, .3);
+
+            &.pb_ok {
+              cursor: pointer;
+              background-color: rgba(125, 31, 217, 1.00);
+              @include transition(all .3s);
+
+              &:hover, &:active {
+                background-color: rgba(125, 31, 217, .9);
+              }
+            }
+
+            &:focus {
+              outline: 0;
+            }
+          }
+        }
+      }
+
+
+      // .pay_boxs {
+      //   display: inline-block;
+      //   width: calc(100% / 5 - 20px * 4 / 5);
+      //   float: left;
+
+      //   + * {
+      //     margin-left: 20px;
+      //   }
+
+      //   @include range-width(0, 550px) {
+      //     width: 100%;
+          
+      //     + * {
+      //       margin-top: 20px;
+      //     }
+      //   };
+
+      //   @include range-width(550px, 900px) {
+      //     width: calc(100% / 2 - 20px / 2);
+          
+      //     &:nth-child(2n + 2) {
+      //       margin-left: 20px;
+      //     }
+      //     &:nth-child(n + 3) {
+      //       margin-top: 20px;
+      //     }
+      //   };
+
+      //   a {
+      //     position: relative;
+      //     display: inline-block;
+      //     height: 120px;
+      //     border: 1px solid rgba(230, 230, 230, 1.00);
+      //     @include border-radius(3px);
+      //     // overflow: hidden;
+      //     padding: 32px;
+      //     cursor: pointer;
+
+      //     img {
+      //       width: 100%;
+      //       max-width: 352px;
+      //     }
+
+      //     &.active {
+      //       border: 2px solid rgba(108, 48, 214, 1.00);
+
+      //       input {
+      //         display: inline-block;
+      //         border: 1px solid rgba(226, 226, 226, 1.00);
+      //         width: 100%;
+      //         @include border-radius(3px);
+      //         padding: 5px;
+      //       }
+      //       &:before {
+      //         position: absolute;
+      //         top: 0 - 32px / 2;
+      //         right: 0 - 32px / 2;
+      //         display: inline-block;
+      //         width: 32px;
+      //         height: 32px;
+      //         line-height: 32px;
+      //         @include border-radius(50%);
+      //         content: '\e90a';
+      //         font-family: "icomoon"; speak: none; font-style: normal; font-weight: normal; font-variant: normal;
+      //         @include font-smoothing(antialiased);
+      //         background-color: rgba(125, 31, 217, 1.00);
+      //         font-weight: bold;
+      //         color: white;
+      //       }
+      //     }
+
+      //     @include range-width(0, 550px) {
+      //       padding: 10px;
+
+      //       img {
+      //         max-width: 225px;
+      //       }
+      //     };
+
+      //     @include range-width(550px, 900px) {
+      //       padding: 10px;
+
+      //       img {
+      //         max-width: 215px;
+      //       }
+      //     };
+      //   }
+      // }
     }
+
     > span {
       color: rgba(102, 102, 102, 1.00);
       display: inline-block;
