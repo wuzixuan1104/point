@@ -306,6 +306,62 @@
           padding: 16px;
           @include clearfix();
 
+          &.invo {
+            display: inline-block;
+            width: calc(100% - 30px);
+            margin: 15px 15px 0 15px;
+            padding: 0;
+            border-top: 1px solid rgba(209, 209, 209, 1.00);
+            border-bottom: 1px solid rgba(209, 209, 209, 1.00);
+
+            b {
+              display: inline-block;
+              width: 100%;
+              cursor: auto;
+              color: black;
+              font-size: 14px;
+              border: 0;
+              padding: 0;
+              margin-top: 0;
+
+              &:hover, &:active {
+                background-color: transparent;
+              }
+
+              &:nth-child(2) {
+                margin-left: 0;
+              }
+
+              input {
+                display: inline-block;
+                width: 80px;
+                padding: 3px 5px;
+              }
+
+              button {
+                display: inline-block;
+                cursor: pointer;
+                width: 60px;
+                padding: 3px;
+                font-size: 14px;
+                color: white;
+                border: 0;
+                float: right;
+                @include border-radius(3px);
+                background-color: rgba(61, 21, 119, .9);
+
+                &:focus {
+                  outline: 0;
+                }
+
+                &:hover, &:active {
+                  background-color: rgba(61, 21, 119, .8);
+                }
+
+              }
+            }
+          }
+
           > * {
             float: left;
             display: inline-block;
@@ -339,6 +395,7 @@
                 margin-left: 20px;
               }
             }
+
             // &.yesin {
             //   margin-left: 20px;
             //   border: 1px solid rgba(123, 45, 214, 1.00);
