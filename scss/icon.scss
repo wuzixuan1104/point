@@ -6,6 +6,21 @@
   @include font-smoothing(antialiased);
 }
 
+.icon-medal-01:before {
+  content: "\e919";
+}
+.icon-pay:before {
+  content: "\e91a";
+}
+.icon-headphones:before {
+  content: "\e91b";
+}
+.icon-trophy-01:before {
+  content: "\e91c";
+}
+.icon-user:before {
+  content: "\e900";
+}
 .icon-envelope:before {
   content: "\e901";
 }
@@ -62,9 +77,6 @@
 }
 .icon-x:before {
   content: "\e910";
-}
-.icon-user:before {
-  content: "\e900";
 }
 .icon-pencil:before {
   content: "\e916";
