@@ -1,10 +1,10 @@
 @font-face {
   font-family: 'icomoon';
-  src:  url('fonts/icomoon.eot?lrdrsw');
-  src:  url('fonts/icomoon.eot?lrdrsw#iefix') format('embedded-opentype'),
-    url('fonts/icomoon.ttf?lrdrsw') format('truetype'),
-    url('fonts/icomoon.woff?lrdrsw') format('woff'),
-    url('fonts/icomoon.svg?lrdrsw#icomoon') format('svg');
+  src:  url('fonts/icomoon.eot?i3q886');
+  src:  url('fonts/icomoon.eot?i3q886#iefix') format('embedded-opentype'),
+    url('fonts/icomoon.ttf?i3q886') format('truetype'),
+    url('fonts/icomoon.woff?i3q886') format('woff'),
+    url('fonts/icomoon.svg?i3q886#icomoon') format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -24,6 +24,9 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-user:before {
+  content: "\e900";
+}
 .icon-envelope:before {
   content: "\e901";
 }
@@ -81,15 +84,6 @@
 .icon-x:before {
   content: "\e910";
 }
-.icon-user:before {
-  content: "\e900";
-}
-.icon-pencil:before {
-  content: "\e916";
-}
-.icon-coin-dollar:before {
-  content: "\e93b";
-}
 .icon-calendar:before {
   content: "\e914";
 }
@@ -101,4 +95,13 @@
 }
 .icon-home:before {
   content: "\e915";
+}
+.icon-pencil:before {
+  content: "\e916";
+}
+.icon-coin-dollar:before {
+  content: "\e93b";
+}
+.icon-arrow-thin-right:before {
+  content: "\e919";
 }

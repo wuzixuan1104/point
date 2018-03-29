@@ -15,10 +15,8 @@ $maxWidth: 1110px;
   height: 200px;
 
   img {
-    display: inline-block;
     width: 100%;
     height: 100%;
-    z-index: 1;
   }
   .title {
     position: absolute;
@@ -26,8 +24,10 @@ $maxWidth: 1110px;
     left: 0;
     height: 200px;
     width: 100%;
+    background-color: rgba(87, 63, 139, 0.69);
 
     span {
+      color: white;
       font-size: 25px;
       font-weight: bold;
       line-height: 200px;
@@ -142,53 +142,169 @@ $sideMenu: 280px;
   }
 }
 
+$otherHeight: 380px;
 .other {
-  display: inline-block;
+  position: relative;
+  display: block;
   width: 100%;
-  max-width: $maxWidth;
-  height: auto;
-  border: 1px solid red;
-  padding-bottom: 50px;
-  @include clearfix();
 
-  > * {
+  .bg {
+    position: absolute;
     display: inline-block;
-  }
-  .title {
-    display: block;
-    // text-decoration: underline;
-    text-align: left;
-    font-size: 20px;
-    font-weight: bold;
-    color: rgba(57, 34, 119, 1.00);
-
-    span {
-      border-bottom: 1px solid rgba(57, 34, 119, 1.00);
+    width: 100%;
+    height: $otherHeight;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    img {
+      width: 100%;
+      height: 100%;
     }
   }
 
-  .content {
-    display: block;
-    margin-top: 20px;
-    text-align: left;
-    height: auto;
-    font-size: 15px;
+  .container {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    max-width: $maxWidth;
+    height: $otherHeight;
+    // border: 1px solid red;
+    padding-bottom: 50px;
+    padding-top: 55px;
     @include clearfix();
 
-    .part {
-      width: calc( (#{$maxWidth} - 60px) / 4);
-      height: 100px;
-      border: 1px solid red;
-      float: left;
+    > * {
+      display: inline-block;
+      @include clearfix();
+    }
+    .title {
+      display: block;
       text-align: left;
-      text-decoration: none;
-      color: #2d2d2d;
-      margin-right: 10px;
+      font-size: 20px;
+      font-weight: bold;
+      color: rgba(57, 34, 119, 1.00);
 
-      span:nth-child(1) {
-        color: rgba(57, 34, 119, 1.00);
-        font-weight: bold;
+      span {
+        display: inline-block;
+        height: 30px;
+        border-bottom: 1px solid rgba(57, 34, 119, 1.00);
+      }
+    }
+
+    .content {
+      display: block;
+      margin-top: 30px;
+      text-align: left;
+      font-size: 15px;
+      @include clearfix();
+
+      .part {
+        width: calc( (#{$maxWidth} - 30px) / 4);
+        height: 100px;
+        float: left;
+        text-align: left;
+        text-decoration: none;
+        color: #2d2d2d;
+        margin-right: 10px;
+
+        &:last-child {
+          margin-right: 0;
+        }
+
+        .image {
+          display: block;
+          height: 80px;
+          width: calc( (#{$maxWidth} - 100px) / 4);
+          overflow: hidden;
+          margin-top: 20px;
+          margin-bottom: 15px;
+          img {
+            width: 100%;
+            heigth: 100%;
+          }
+        }
+        span:nth-child(1) {
+          color: rgba(57, 34, 119, 1.00);
+          font-weight: bold;
+
+          &:after {
+            width: 30px;
+            font-size: 10px;
+            color: #929191;
+          }
+        }
       }
     }
   }
+}
+
+.footer_banner {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  height: 450px;
+
+  .image {
+    position: absolute;
+    display: inline-block;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+  .hover_img {
+    position: absolute;
+    display: inline-block;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(38, 7, 77, 0.9);
+  }
+  .banner {
+    position: relative;
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+    max-width: $maxWidth;
+    padding: 50px 90px 50px 90px;
+    border: 2px solid white;
+    z-index: 5;
+    @include clearfix();
+    > * {
+      display: inline-block;
+      float: left;
+    }
+    .left_banner {
+      width: 40%;
+      text-align: left;
+      color: white;
+
+      div {
+        display: block;
+        border-bottom: 1px solid white;
+        font-size: 16px;
+        font-weight: bold;
+
+        &:first-child {
+          padding-bottom: 20px;
+        }
+        b {
+          font-size: 20px;
+        }
+      }
+      div:last-child {
+        border-bottom: 0;
+      }
+    }
+    .right_banner {
+      width: 60%;
+    }
+  }
+
 }

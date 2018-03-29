@@ -6,6 +6,9 @@
   @include font-smoothing(antialiased);
 }
 
+.icon-user:before {
+  content: "\e900";
+}
 .icon-envelope:before {
   content: "\e901";
 }
@@ -63,15 +66,6 @@
 .icon-x:before {
   content: "\e910";
 }
-.icon-user:before {
-  content: "\e900";
-}
-.icon-pencil:before {
-  content: "\e916";
-}
-.icon-coin-dollar:before {
-  content: "\e93b";
-}
 .icon-calendar:before {
   content: "\e914";
 }
@@ -83,4 +77,13 @@
 }
 .icon-home:before {
   content: "\e915";
+}
+.icon-pencil:before {
+  content: "\e916";
+}
+.icon-coin-dollar:before {
+  content: "\e93b";
+}
+.icon-arrow-thin-right:after {
+  content: "\e919";
 }
