@@ -68,6 +68,8 @@ $maxWidth: 1110px;
 }
 
 $sideMenu: 280px;
+$pageActiveNum: 1;
+
 .page {
   display: inline-block;
   width: 100%;
@@ -106,6 +108,16 @@ $sideMenu: 280px;
         background-color: rgba(102, 47, 204, 1.00);
       }
     }
+
+    $c: 10;
+    @for $i from 1 through $c {
+      // @debug $i;
+      &:has(.active) {
+        @debug $i;
+        $pageActiveNum: $i;
+      }
+    }
+    @debug $pageActiveNum;
   }
 
   .page_right {
@@ -118,26 +130,34 @@ $sideMenu: 280px;
       padding: 20px;
     }
 
-    h1 {
-      font-size: 20px;
-      color: rgba(57, 34, 119, 1.00);
-      span {
-        display: block;
-        text-align: left;
-      }
-    }
+    .page_detail {
+      display: none;
 
-    article {
-      p {
-        line-height: 28px;
+      &:nth-child( #{$pageActiveNum} ) {
+        display: inline-block;
       }
-      a {
-        color: rgba(76, 156, 229, 1.00);
-        @include a(1px, true);
+
+      h1 {
+        font-size: 20px;
+        color: rgba(57, 34, 119, 1.00);
+        span {
+          display: block;
+          text-align: left;
+        }
       }
-      display: inline-block;
-      text-align: left;
-      color: #2d2d2d;
+
+      article {
+        p {
+          line-height: 28px;
+        }
+        a {
+          color: rgba(76, 156, 229, 1.00);
+          @include a(1px, true);
+        }
+        display: inline-block;
+        text-align: left;
+        color: #2d2d2d;
+      }
     }
   }
 }
@@ -169,7 +189,7 @@ $otherHeight: 380px;
     width: 100%;
     max-width: $maxWidth;
     height: auto;
-    padding: 55px 20px 50px 20px;
+    padding: 55px 30px 50px 30px;
     @include clearfix();
 
     > * {
@@ -197,7 +217,7 @@ $otherHeight: 380px;
       @include clearfix();
 
       .part {
-        width: calc( (#{$maxWidth} - 70px) / 4 );
+        width: calc( (#{$maxWidth} - 90px) / 4 );
         height: auto;
         float: left;
         text-align: left;
