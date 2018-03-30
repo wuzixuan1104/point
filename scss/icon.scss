@@ -6,6 +6,7 @@
   @include font-smoothing(antialiased);
 }
 
+<<<<<<< HEAD
 .icon-medal-01:before {
   content: "\e919";
 }
@@ -18,6 +19,8 @@
 .icon-trophy-01:before {
   content: "\e91c";
 }
+=======
+>>>>>>> wuzixuan1104-cherry/2018_03_29
 .icon-user:before {
   content: "\e900";
 }
@@ -78,12 +81,15 @@
 .icon-x:before {
   content: "\e910";
 }
+<<<<<<< HEAD
 .icon-pencil:before {
   content: "\e916";
 }
 .icon-coin-dollar:before {
   content: "\e93b";
 }
+=======
+>>>>>>> wuzixuan1104-cherry/2018_03_29
 .icon-calendar:before {
   content: "\e914";
 }
@@ -95,4 +101,13 @@
 }
 .icon-home:before {
   content: "\e915";
+}
+.icon-pencil:before {
+  content: "\e916";
+}
+.icon-coin-dollar:before {
+  content: "\e93b";
+}
+.icon-arrow-thin-right:before {
+  content: "\e919";
 }

@@ -4,7 +4,7 @@
  * @license     http://opensource.org/licenses/MIT  MIT License
  * @link        https://www.ioa.tw/
  */
- 
+
 $(function () {
 
   // 漢堡變換 + menu滑出
@@ -27,7 +27,7 @@ $(function () {
   $('.login_boxs .icon-x').click (function () {
     $('.login_boxs').toggleClass ('show');
   });
-  
+
   $('.login_boxs .show-reg').click (function () {
     $('.login_boxs').toggleClass ('show-reg');
   });
@@ -38,5 +38,6 @@ $(function () {
   $('#login-btn').click (function () {
     $('.login_boxs').toggleClass ('show');
   });
+  $('.other .bg, .footer_banner .image, .header_banner').imgLiquid ();
 
 });
