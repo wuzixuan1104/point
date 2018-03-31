@@ -6,6 +6,9 @@
   @include font-smoothing(antialiased);
 }
 
+.icon-user:before {
+  content: "\e900";
+}
 .icon-envelope:before {
   content: "\e901";
 }
@@ -18,20 +21,11 @@
 .icon-user2:before {
   content: "\e904";
 }
-.icon-align-justify:before {
-  content: "\e90d";
-}
-.icon-book:before {
-  content: "\e90e";
-}
 .icon-check-circle:before {
   content: "\e905";
 }
-.icon-check:before {
-  content: "\e918";
-}
-.icon-chevron-down:before {
-  content: "\e90a";
+.icon-clock2:before {
+  content: "\e906";
 }
 .icon-chevron-left:before {
   content: "\e907";
@@ -42,45 +36,66 @@
 .icon-chevron-up:before {
   content: "\e909";
 }
-.icon-clock2:before {
-  content: "\e906";
-}
-.icon-mail:before {
-  content: "\e911";
+.icon-chevron-down:before {
+  content: "\e90a";
 }
 .icon-minus:before {
   content: "\e90b";
 }
-.icon-phone:before {
-  content: "\e912";
-}
 .icon-plus:before {
   content: "\e90c";
 }
-.icon-user3:before {
-  content: "\e913";
+.icon-align-justify:before {
+  content: "\e90d";
 }
-.icon-x:before {
-  content: "\e910";
-}
-.icon-user:before {
-  content: "\e900";
-}
-.icon-pencil:before {
-  content: "\e916";
-}
-.icon-coin-dollar:before {
-  content: "\e93b";
-}
-.icon-calendar:before {
-  content: "\e914";
-}
-.icon-tag:before {
-  content: "\e917";
+.icon-book:before {
+  content: "\e90e";
 }
 .icon-cart:before {
   content: "\e90f";
 }
+.icon-x:before {
+  content: "\e910";
+}
+.icon-mail:before {
+  content: "\e911";
+}
+.icon-phone:before {
+  content: "\e912";
+}
+.icon-user3:before {
+  content: "\e913";
+}
+.icon-calendar:before {
+  content: "\e914";
+}
 .icon-home:before {
   content: "\e915";
+}
+.icon-pencil:before {
+  content: "\e916";
+}
+.icon-tag:before {
+  content: "\e917";
+}
+.icon-check:before {
+  content: "\e918";
+}
+.icon-medal-01:before {
+  content: "\e919";
+}
+.icon-pay:before {
+  content: "\e91a";
+}
+.icon-headphones:before {
+  content: "\e91b";
+}
+.icon-trophy-01:before {
+  content: "\e91c";
+}
+.icon-arrow-thin-right:before {
+  content: "\e219";
+}
+.icon-coin-dollar:before {
+  content: "\e93b";
 }
